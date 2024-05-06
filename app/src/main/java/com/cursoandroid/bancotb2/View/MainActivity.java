@@ -9,12 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.cursoandroid.bancotb2.Controller.UsuarioController;
 import com.cursoandroid.bancotb2.Model.Usuario;
 import com.cursoandroid.bancotb2.R;
 
 public class MainActivity extends AppCompatActivity {
 
     Usuario usuario;
+
+    UsuarioController controller;
 
     EditText id_nome;
 
@@ -33,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         usuario = new Usuario();
+
+        controller = new UsuarioController(this);
+        controller.toString();
 
         id_nome = findViewById(R.id.id_nome);
         id_cpf = findViewById(R.id.id_cpf);
@@ -55,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 usuario.setDepositoInical(id_deposito.getText().toString());
 
                 Toast.makeText(MainActivity.this,"Cadastro realizado com sucesso !" + usuario.toString(),Toast.LENGTH_LONG).show();
+
+                controller.cadastrar(usuario);
             }
         });
 
