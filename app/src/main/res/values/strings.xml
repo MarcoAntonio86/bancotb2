@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">bancotb2</string>
+    <string name="txt_hint_edit_Nome">Nome</string>
+    <string name="txt_hint_edit_CPF">CPF</string>
+    <string name="txt_hint_edit_Senha">Senha</string>
+    <string name="txt_hint_edit_DepositoInicial">Deposito Inicial</string>
+    <string name="txt_button_Cadastrar">Cadastrar</string>
+</resources>
